@@ -1,5 +1,31 @@
 .sidebar {
   background-color: #fff;
-  border-right: 0.6px solid #ccc;
-  text-align: center;
+  border-right: 2px solid #ccc;
+}
+.sidebar h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* Cart */
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+/* Category Design */
+.categories-container {
+  padding: 20px 0px;
+}
+.categories {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+}
+.categories input {
 }

@@ -1,12 +1,15 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar";
+import MainPage from "./components/Main/MainPage";
 import Sidebar from "./components/Sidebar/Sidebar";
+import ProductProvider from "./context/ProductContext";
 const App = () => {
   return (
-    <div className="container">
-      <Sidebar />
-      <Navbar />
-    </div>
+    <ProductProvider>
+      <div className="container">
+        <Sidebar />
+        <MainPage />
+      </div>
+    </ProductProvider>
   );
 };
 
