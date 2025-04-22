@@ -18,10 +18,19 @@ const Recommended = () => {
     });
   };
 
+  // dispatch function to reset all filters
+  const handleResetAll = () => {
+    dispatch({
+      type: "ALL",
+      payload: "",
+    });
+  };
+
   return (
     <div className="recommended-container">
       <h2>Recommended</h2>
       <div className="recommended-products">
+        <button onClick={handleResetAll}> All</button>
         {filteredProductsBrand.map((brand) => {
           return (
             <button key={brand} onClick={() => filterProduct(brand)}>

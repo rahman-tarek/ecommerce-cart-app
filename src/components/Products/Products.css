@@ -16,7 +16,7 @@
 }
 .products-container .products-card img {
   width: 100%;
-  height: auto;
+  height: 150px;
   border-radius: 8px;
 }
 .products-card h2 {

@@ -18,8 +18,10 @@
   border-bottom: 1px solid #ccc;
 }
 /* Category Design */
-.categories-container {
-  padding: 20px 0px;
+.categories-container,
+.price-container,
+.color-container {
+  padding: 20px 40px;
 }
 .categories {
   display: flex;
@@ -27,5 +29,12 @@
   gap: 10px;
   margin-top: 10px;
 }
-.categories input {
+#category-label,
+#price-label,
+#color-label {
+  margin-left: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #969696;
 }

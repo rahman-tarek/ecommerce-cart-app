@@ -17,10 +17,18 @@ const Category = () => {
   return (
     <div className="categories-container">
       <h2>Categories</h2>
-      {/* <div className="categories">
-        <input type="radio" />
-        <span>Shoes</span>
-      </div> */}
+      <div className="All">
+        <input
+          type="radio"
+          name="All"
+          id="All"
+          value={"All"}
+          onClick={() => categoryHandle("ALL")}
+        />
+        <label htmlFor="All" id="category-label">
+          All
+        </label>
+      </div>
       {filteredProductsCategory.map((category) => (
         <div key={category}>
           <input
@@ -30,7 +38,9 @@ const Category = () => {
             value={category}
             onClick={() => categoryHandle(category)}
           />
-          <label htmlFor={category}>{category}</label>
+          <label htmlFor={category} id="category-label">
+            {category}
+          </label>
         </div>
       ))}
     </div>

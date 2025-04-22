@@ -27,7 +27,9 @@ const Price = () => {
             value={price}
             onClick={() => handlePriceFilter(price)}
           />
-          <label htmlFor={price}>{price}</label>
+          <label htmlFor={price} id="price-label">
+            {price}
+          </label>
         </div>
       ))}
     </div>

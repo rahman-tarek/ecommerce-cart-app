@@ -26,7 +26,9 @@ const Color = () => {
             value={color}
             onClick={() => handleColorFilter(color)}
           />
-          <label htmlFor={color}>{color}</label>
+          <label htmlFor={color} id="color-label">
+            {color}
+          </label>
         </div>
       ))}
     </div>
