@@ -1,4 +1,3 @@
-import React from "react";
 import ContextHook from "../../context/ContextHook.jsx";
 
 const Color = () => {
@@ -16,7 +15,7 @@ const Color = () => {
   };
   return (
     <div className="color-container">
-      <h2>Colors</h2>
+      <h2 className="text-primary">Colors</h2>
       {filteredProductsColor.map((color) => (
         <div key={color}>
           <input
@@ -26,7 +25,7 @@ const Color = () => {
             value={color}
             onClick={() => handleColorFilter(color)}
           />
-          <label htmlFor={color} id="color-label">
+          <label htmlFor={color} id="color-label" className="text-secondary">
             {color}
           </label>
         </div>

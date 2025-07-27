@@ -1,4 +1,4 @@
-import React from "react";
+import "../index.css";
 import MainPage from "./components/Main/MainPage";
 import Sidebar from "./components/Sidebar/Sidebar";
 import ProductProvider from "./context/ProductContext";

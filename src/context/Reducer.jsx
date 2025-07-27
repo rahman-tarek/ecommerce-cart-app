@@ -1,15 +1,16 @@
 import initialState from "../db/data";
 
-const Reducer = (state = initialState, action) => {
+const Reducer = (state, action) => {
+  let initialState = state;
   switch (action.type) {
     // Reset all filters and return the initial state
-    case "ALL":
-      return initialState;
+    case "SET_PRODUCTS":
+      return action.payload;
 
     case "SEARCH_PRODUCT":
       if (action.payload === "") {
         // If the search value is empty, return the initial state
-        return initialState;
+        return state;
       } else {
         // Filter products where name includes the search value
         return initialState.filter((product) => {
