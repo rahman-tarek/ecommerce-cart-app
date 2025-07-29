@@ -3,7 +3,6 @@ import ContextHook from "../../context/ContextHook.jsx";
 
 const Category = () => {
   const { state, dispatch } = ContextHook();
-  console.log(state);
   // Filter out products category
   const filteredProductsCategory = [
     ...new Set(state.map((product) => product.category)),

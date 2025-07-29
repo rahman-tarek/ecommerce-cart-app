@@ -11,7 +11,6 @@ const useFetchData = (url) => {
             setError(null);
             try {
                 const response = await fetch(url);
-                console.log(response);
                 // Check if the response is ok or not
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -19,7 +18,6 @@ const useFetchData = (url) => {
 
                 // Parse the JSON data from the response
                 const products = await response.json();
-                console.log(products);
 
                 setData(products); // Set the fetched data to state
 

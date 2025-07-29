@@ -8,9 +8,11 @@ export const ProductContext = createContext();
 
 // Create Provider Component
 const ProductProvider = ({ children }) => {
+
   // Custom Hook to fetch data
   const { data } = useFetchData('https://dummyjson.com/products');
-  console.log(data.products);
+
+  // Initialize state with useReducer
   const [state, dispatch] = useReducer(reducer, []);
 
   // Update state when data is fetched

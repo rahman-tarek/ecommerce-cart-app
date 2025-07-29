@@ -2,7 +2,9 @@ import { BsBag } from "react-icons/bs";
 import "./Products.css";
 
 const ProductCard = ({ product }, addCart, setAddCart) => {
+  console.log(product)
   const { id, title, img, rating, reviews, prevPrice, newPrice } = product;
+  console.log(id, title, img, thumbnail, rating, reviews, prevPrice, newPrice);
 
   // Handle Add New Cart
   const handleAddCart = (id) => {
@@ -17,11 +19,11 @@ const ProductCard = ({ product }, addCart, setAddCart) => {
         <h2>{title}</h2>
         <div className="rating">
           <span>⭐⭐⭐⭐</span>
-          <span>({reviews})</span>
+          {/* <span>({reviews})</span> */}
         </div>
         <div className="buttonBottom">
           <div className="price">
-            <del>{prevPrice}</del>
+            <del>{newPrice}</del>
             <span>{newPrice}</span>
           </div>
           <BsBag className="bag-icon" size={20} onClick={handleAddCart} />

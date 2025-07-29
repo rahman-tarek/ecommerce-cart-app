@@ -8,7 +8,6 @@ const Products = () => {
   const { addCart, setAddCart } = useState(0);
   // Destructure the data from the context
   const { state, dispatch } = ContextHook();
-  console.log(state);
 
   return (
     <div className="products-container">
