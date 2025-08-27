@@ -3,19 +3,19 @@ import "./Products.css";
 
 const ProductCard = ({ product }, addCart, setAddCart) => {
   console.log(product)
-  const { id, title, img, rating, reviews, prevPrice, newPrice } = product;
-  console.log(id, title, img, thumbnail, rating, reviews, prevPrice, newPrice);
+  const { id, title, image, price, rating } = product;
+  console.log(title)
+
 
   // Handle Add New Cart
   const handleAddCart = (id) => {
-    setAddCart(addCart + 1);
-    console.log(addCart);
+
   };
 
   return (
     <div>
       <div className="products-card" key={id}>
-        <img src={img} alt={title} />
+        <img src={image} alt={title} />
         <h2>{title}</h2>
         <div className="rating">
           <span>⭐⭐⭐⭐</span>
@@ -23,8 +23,8 @@ const ProductCard = ({ product }, addCart, setAddCart) => {
         </div>
         <div className="buttonBottom">
           <div className="price">
-            <del>{newPrice}</del>
-            <span>{newPrice}</span>
+            <del>{price + 10}</del>
+            <span>{price}</span>
           </div>
           <BsBag className="bag-icon" size={20} onClick={handleAddCart} />
         </div>
